@@ -1,23 +1,22 @@
-# Hello world docker action
+# Action SPA
 
-This action prints "Hello World" to the log or "Hello" + the name of a person to greet. To learn how this action was built, see "[Creating a Docker container action](https://help.github.com/en/articles/creating-a-docker-container-action)" in the GitHub Help documentation.
+GitHub Action for [SPinnaker Admin (SPA) tool](https://github.com/kekeniker/spa).
 
-## Inputs
-
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
-
-## Example usage
+## Usage
 
 ```yaml
-uses: actions/hello-world-docker-action@master
-with:
-  who-to-greet: 'Mona the Octocat'
+      - name: Create service account
+        uses: kekeniker/action-spa@v1
+        with:
+          command: service-account create -o /tmp/sa.json
 ```
+
+### Action Inputs
+
+| Name | Description | Default |
+| --- | --- | --- |
+| `command` | Command to execute | - (Required) |  
+
+## License
+
+[MIT](LICENSE)
